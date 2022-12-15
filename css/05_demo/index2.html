@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        article{
+            display: flex;
+            gap: 10px;
+        }
+        nav,main,aside{
+            width: 500px;
+            height: 500px;
+            flex: 1 1 auto;
+        }
+        nav{
+            background-color: rebeccapurple;
+        }
+        main{
+            background-color: red;
+        }
+        aside{
+            background-color: aqua;
+        }
+        @media(max-width:768px){
+            article{
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <article>
+        <nav>
+        </nav>
+        <main>
+        </main>
+        <aside>
+        </aside>
+    </article>
+</body>
+</html>

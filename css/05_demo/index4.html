@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .grid-content{
+            box-sizing: border-box;
+            padding: 0px 50px;
+            display: grid;
+            grid-row: repeat(12,1fr);
+            grid-column: repeat(12,1fr);
+            width: 100%;
+        }
+        /* header,article,footer{
+            width: 100%;
+        } */
+        header{
+            grid-column: 1/-1;
+        }
+        article{
+            display: grid;
+            grid-column: 1/-1;
+        }
+        article nav{
+            grid-column: 1/4;
+        }
+        article main{
+            grid-column: 4/12;
+        }
+        footer{
+            grid-column: 1/-1;
+        }
+    </style>
+</head>
+<body>
+    <h1>使用grid实现圣杯布局</h1>
+    <div class="grid-content">
+        <header>
+            <div class="header">头部</div>
+        </header>
+        <article>
+            <nav>
+                侧边栏
+            </nav>
+            <main>
+                内容
+            </main>
+        </article>
+        <footer>
+            <div>
+                <p>&copy;author:22_fxxk</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 绝对定位 -->
+    <!-- 在父元素没有设置相对定位或绝对定位的情况下，
+    元素相对于根元素定位（即html元素）（是父元素没有）。 -->
+    <style>
+        button{
+            position: absolute;
+            bottom: 50px;
+            right: 50px;
+        }
+        body{
+            position: relative;
+        }
+        /* 伪元素 */
+        /* :伪类  ::伪类元素 */
+        body h1:nth-child(1)::first-letter{
+            font-style: italic;
+        }
+        /* 兄弟选择器 */
+        /* 选中h2下的p标签 */
+        h2+p{
+            color: red;
+        }
+        p+h1{
+            font-family: sans-serif;
+            text-transform: uppercase;
+        }
+        #t{
+            /* background-color: orange; */
+            position: relative;
+        }
+        #t::after{
+            content: 'top';
+            font-size: 15px;
+            background-color: yellow;
+            padding: 5px;
+            position: absolute;
+            right: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>😃I LOVE WORK</h1>
+    <h2>😍THIS IS H2</h2>
+    <p>😘THIS IS P</p>
+    <h1 id="t">😜the basic the language of html</h1>
+    <div>
+        <h1>hhh</h1>
+        <h1>hhh</h1>
+        <h1>hhh</h1>
+        <h1>hhh</h1>
+        <h1>hhh</h1>
+        <h1>hhh</h1>
+        <h1>hhh</h1>
+        <h1>hhh</h1>
+        <h1>hhh</h1>
+        <h1>hhh</h1>
+        <h1>hhh</h1>
+        <h1>hhh</h1>
+        <h1>hhh</h1>
+        <h1>hhh</h1>
+        <h1>hhh</h1>
+        <h1>hhh</h1>
+        <h1>hhh</h1>
+        <h1>hhh</h1>
+        <h1>hhh</h1>
+        <h1>hhh</h1>
+        <h1>hhh</h1>
+        <h1>hhh</h1>
+        <h1>hhh</h1>
+        <h1>hhh</h1>
+        <h1>hhh</h1>
+        <h1>hhh</h1>
+        <h1>hhh</h1>
+        <h1>hhh</h1>
+        <h1>hhh</h1>
+        <h1>hhh</h1>
+        <h1>hhh</h1>
+        <h1>hhh</h1>
+        <h1>hhh</h1>
+        <h1>hhh</h1>
+        <h1>hhh</h1>
+        <h1>hhh</h1>
+        <h1>hhh</h1>
+        <h1>hhh</h1>
+        <h1>hhh</h1>
+        <h1>hhh</h1>
+        <h1>hhh</h1>
+        <h1>hhh</h1>
+        <h1>hhh</h1>
+        <h1>hhh</h1>
+        <h1>hhh</h1>
+        <h1>hhh</h1>
+        <h1>hhh</h1>
+        <h1>hhh</h1>
+        <h1>hhh</h1>
+        <h1>hhh</h1>
+    </div>
+    <button>❤click me</button>
+</body>
+</html>

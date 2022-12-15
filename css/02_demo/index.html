@@ -1,0 +1,61 @@
+<!-- 2022.12.08 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main-article{
+            background-color: antiquewhite;
+            border:dashed  5px rgb(93, 149, 212);       /*指定border*/
+        }
+        /* 伪类选择器 */
+        .fake-children li:first-child{
+            font-size: 30px;
+        }
+        /* odd 奇数子项 even 偶数子项 */
+        .fake-children li:nth-child(odd){
+            color: blue;
+        }
+        .fake-children li:nth-child(even){
+            color: red;
+        }
+        .fake-children li:first-child{
+            /* 这里要注意 .fake-children 第一个元素不是li节点为p所以这里不生效 要第一个元素为li节点该样式生效 */
+            color:yellow
+        }
+
+        /* 这里三个样式指向一个节点 设计样式权重 */
+        /* id>class(伪类)>元素>通用 */
+        /* 如果有多个相同权重的就是用最后一个样式 */
+        /* 可以使用!important将权重提高最高 */
+        p{
+            color: red;
+        }
+        #p{
+            color: yellow;
+        }
+        .same-p{
+            color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <article class="main-article">
+        <ul>
+            <li>jack</li>
+            <li>jack</li>
+            <li>jack</li>
+        </ul>
+    </article>
+    <ul class="fake-children">
+        <p>test</p>
+        <li>ben</li>
+        <li>ben</li>
+        <li>ben</li>
+    </ul>
+    <p id="p" class="same-p">this is same element</p>
+</body>
+</html>
