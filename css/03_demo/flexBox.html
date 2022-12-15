@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        html,body{
+            width: 100%;
+        }
+        .content{
+            width: 100%;
+            padding-left: 50px;
+            padding-right: 50px;
+            background-color: gray;
+        }
+        .el-1{
+            background-color: yellow;
+        }
+        .el-2{
+            background-color: red;
+            height: 100px;      /*flex布局的高度是以item最大的height为高度*/
+        }
+        .el-3{
+            background-color: pink;
+        }
+        .el-4{
+            background-color: green;
+        }
+        .el-5{
+            background-color: blue;
+        }
+        .el{
+            font-family: sans-serif;
+            font-weight: bold;
+            font-size: 30px;
+            text-align: center;
+        }
+        /* align 纵轴 justify 横轴 */
+        .content{
+            display: flex;
+            justify-items:center;
+            align-items: center;
+            /* gap 设置item之间的间隔 */
+            gap:30px;
+        }
+        /* 可以通过order来设置item的先后顺序 */
+        .el-5{
+            order: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="el el-1">html</div>
+        <div class="el el-2">javascript</div>
+        <div class="el el-3">java</div>
+        <div class="el el-4">python</div>
+        <div class="el el-5">c#</div>
+    </div>
+</body>
+</html>

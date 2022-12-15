@@ -1,0 +1,81 @@
+<!-- 2022.12.07 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        h1{
+            color: red;
+        }
+        h2{
+            font-size: 30px;        /*字体大小*/
+            font-family: sans-serif;    /*字体风格*/
+            text-transform: uppercase;  /*字体转换变大写*/
+            line-height: 20px;          /*行高*/
+            text-align: center;         /*文字位置(相对于父元素)*/
+            font-style: italic;         /*字体样式斜体*/
+        }
+        p{
+            font-family: sans-serif;
+            font-size: 20px;
+        }
+        /* 如果此时我们想让footer中的p标签比其他p标签更小可以使用后代选择器 */
+        footer p{
+            font-size: 10px;
+        }
+        .lucy-ul{
+            list-style: none;
+        }
+        .main-article{
+            background-color: antiquewhite;
+            border:dashed  5px rgb(93, 149, 212);       /*指定border*/
+        }
+        /* 伪类选择器 */
+        .fake-children li:first-child{
+            font-size: 30px;
+        }
+        /* odd 奇数子项 even 偶数子项 */
+        .fake-children li:nth-child(odd){
+            color: blue;
+        }
+        .fake-children li:nth-child(even){
+            color: red;
+        }
+        .fake-children li:first-child{
+            /* 这里要注意 .fake-children 第一个元素不是li节点为p所以这里不生效 要第一个元素为li节点该样式生效 */
+            color:yellow
+        }
+    </style>
+</head>
+<body>
+    <!-- css 分为三种写法 行内样式 内联样式 外部样式 -->
+    <h1 style="color: red;">how to learn css</h1>
+    <h2>today,i learning how to write css</h2>
+    <p>today,i learning how to write css</p>
+    <article class="main-article">
+        <ul>
+            <li>jack</li>
+            <li>jack</li>
+            <li>jack</li>
+        </ul>
+    </article>
+    <ul class="lucy-ul">
+        <li>lucy</li>
+        <li>lucy</li>
+        <li>lucy</li>
+    </ul>
+    <ul class="fake-children">
+        <p>test</p>
+        <li>ben</li>
+        <li>ben</li>
+        <li>ben</li>
+    </ul>
+    <footer>
+        <p>&copy;with zero</p>
+    </footer>
+</body>
+</html>
