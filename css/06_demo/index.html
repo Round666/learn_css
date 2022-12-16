@@ -1,0 +1,55 @@
+<!-- 2022.12.16 -->
+<!-- css grid -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: 150px 200px 150px;
+            grid-template-rows: 200px 150px;
+            /* 主轴方向元素对齐方式 */
+            justify-content: space-between;
+            /* 交叉元素对齐方式 */
+            align-content: center;
+            /* align-content在交叉轴有多行元素生效 且有多余空间 */
+            gap: 30px;
+            align-items: center;
+            /* align-items 以元素自身为十字轴进行对齐 */
+            justify-items: end;
+        }
+        .container div:nth-child(2){
+            height: 150px;
+            /* justify-self: end; */
+        }
+        .container{
+            background-color: black;
+            margin: 40px 50px;
+            height: 500px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>grid布局</h1>
+    <article class="container">
+        <div style="background-color: red;">Java</div>
+        <div style="background-color: green;">HTML</div>
+        <div style="background-color: blue;">CSS</div>
+        <div style="background-color: purple;">JAVASCRIPT</div>
+        <div style="background-color: wheat;">C#</div>
+        <div style="background-color: aqua;">Hadoop</div>
+    </article>
+</body>
+
+</html>
