@@ -1,0 +1,158 @@
+<!-- 2022.12.25 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            padding: 0px 50px;
+        }
+        article{
+            /* width: 70%; */
+            /* margin:200px; */
+            border: solid 5px black;
+            margin-top: 20px;
+            position: relative;
+        }
+        article::before{
+            content: 'sale';
+            text-transform: uppercase;
+            color: white;
+            background-color: red;
+            font-family: sans-serif;
+            font-weight:bold;
+            padding: 5px 10px;
+            position: absolute;
+            left: -36px;
+            top: -20px;
+            letter-spacing: 2px;
+        }
+        header h1{
+            text-align: center;
+            font-family: sans-serif;
+            text-transform: uppercase;
+        }
+        header{
+            background-color: rgba(174, 159, 159, 0.24);
+            padding: 10px 0px;
+        }
+        main p:first-child span:first-child{
+            font-family: sans-serif;
+            font-weight: bold;
+            font-size: 22px;
+        }
+        main p:first-child span:nth-child(2){
+            color: grey;
+            text-transform: uppercase;
+            font-family: sans-serif;
+            font-size: 13px;
+            font-weight: bold;
+        }
+        main p:nth-child(2){
+            font-family: sans-serif;
+            font-weight: bold;
+        }
+        main a:nth-child(3){
+            color: black;
+            font-family: sans-serif;
+            font-weight: bold;
+        }
+        main a:hover{
+            color: orange;
+        }
+        .colorDiv{
+            width: 25px;
+            height: 25px;
+        }
+        .fatherDiv{
+            display: flex;
+            gap: 10px;
+        }
+        aside h3{
+            font-family: sans-serif;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 15px;
+        }
+        aside ul li{
+            margin-top: 20px;
+            font-weight: bold;
+            font-family: sans-serif;
+        }
+        footer button{
+            width: 100%;
+            background-color: black;
+            color: white;
+            font-family: sans-serif;
+            text-transform: uppercase;
+            font-size: 18px;
+        }
+        main{
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        main,aside{
+            padding-top: 15px;
+        }
+        /* grid 布局 */
+        article{
+            display: grid;
+            grid-template-columns: 200px 1fr 1fr;
+            column-gap: 30px;
+        }
+        header{
+            grid-column: 1/-1;
+        }
+        footer{
+            grid-column: 1/-1;
+        }
+    </style>
+</head>
+<body>
+    <article>
+        <header>
+           <h1>converse chuck taylor all star low top</h1> 
+        </header>
+        <nav>
+            <img src="https://www.bing.com/th?id=OIP.NhEH5LNX4MnjiAHQw_dGRAHaKe&w=210&h=297&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" alt="">
+        </nav>
+        <main>
+            <p>
+                <span>$65.00</span>
+                <span>free shipping</span>
+            </p>
+            <p>
+                Ready to dress up or down,these classic canvas Chucks are an everyday wardrobe staple.
+            </p>
+            <a href="#">More information&rightarrow;</a>
+            <div class="fatherDiv">
+                <div class="colorDiv" style="background-color: black;"></div>
+                <div class="colorDiv" style="background-color: blue;"></div>
+                <div class="colorDiv" style="background-color: red;"></div>
+                <div class="colorDiv" style="background-color: yellow;"></div>
+                <div class="colorDiv" style="background-color: green;"></div>
+                <div class="colorDiv" style="background-color: goldenrod;"></div>
+            </div>
+        </main>
+        <aside>
+            <h3>product details</h3>
+            <ul>
+                <li>Lightweight,durable canvas sneaker</li>
+                <li>Lightly padded footbed for added comfort</li>
+                <li>Iconic Chuck taylor ankle patch</li>
+            </ul>
+        </aside>
+        <footer>
+            <button>click sale me</button>
+        </footer>
+    </article>
+</body>
+</html>
