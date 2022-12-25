@@ -1,0 +1,61 @@
+<!-- 2022.12.7 -->
+<!-- float 疑问 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        section{
+            width: 100%;
+            overflow: hidden;
+        }
+        .left,.right{
+            height: 150px;
+            width: 10%;
+        }
+        .left{
+            background-color: palevioletred;
+        }
+        .right{
+            background-color: aquamarine;
+        }
+        .left{
+            float: left
+        }
+        .right{
+            float: left;
+        }
+        section::after{
+            /* content: "hhh";
+            display: block;
+            clear: left; */
+        }
+        body section:nth-child(2){
+            background-color: blue;
+            width: 500px;
+            height: 300px;
+            color: wheat;
+        }
+        /* 一般而言，父级元素不设置高度时，高度由随内容增加自适应高度。当父级元素内部的子元素全部都设置浮动float之后，
+        子元素会脱离标准流，不占位，父级元素检测不到子元素的高度，父级元素高度为0。 */
+
+        /* 需要给父级加个overflow:hidden属性，这样父级的高度就随子级容器及子级内容的高度而自适应 */
+    </style>
+</head>
+<body>
+    <section>
+        <div class="left">1</div>
+        <div class="right">2</div>
+    </section>
+    <section>
+        其他部分
+    </section>
+</body>
+</html>
