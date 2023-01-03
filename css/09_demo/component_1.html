@@ -1,0 +1,217 @@
+<!-- 2023.1.2 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.font.im/css?family=Open+Sans" rel="stylesheet">
+    <style>
+        /* 实现手风琴样式 */
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: 'Open Sans', sans-serif;
+            font-weight: bold;
+            line-height: 1.5;
+        }
+        .content{
+            width: 700px;
+            margin: 100px auto;
+        }
+        .icon{
+            width: 24px;
+            height: 24px;
+            stroke: green;
+        }
+        .component-1-p{
+            color: green;
+        }
+        .hiddenContent ul{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            color: #868e96;
+        }
+        .hiddenContent>p{
+            margin-bottom: 20px;
+        }
+        .hiddenContent li{
+            margin-left: 18px;
+        }
+        .component-1{
+            box-shadow: 0 0 32px rgba(0, 0, 0, 0.1);
+            padding: 24px;
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            column-gap: 12px;
+            row-gap: 24px;
+        }
+        .hiddenContent{
+            grid-column: 2/3;
+        }
+        .content{
+            display: flex;
+            flex-direction: column;
+            row-gap: 24px;
+        }
+        .component-1 .hiddenContent{
+            display: none;
+        }
+        .component-1>p{
+            color: #868e96;
+        }
+        .component-1>svg{
+            stroke: #868e96;
+        }
+        .open .hiddenContent{
+            display: block;
+        }
+        .open>p,svg{
+            color: green;
+        }
+        .open{
+            border-top: 4px solid green;
+        }
+        .icon-2{
+            width: 24px;
+            height: 24px;
+            stroke: #868e96;
+        }
+        .component-1 .icon{
+            display: none;
+        }
+        .open .icon-2{
+            display: none;
+        }
+        .open .icon{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="component-1 open">
+            <p class="component-1-p">01</p>
+            <p class="component-1-p">How do job in my option</p>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                class="icon">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+            </svg>
+
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                class="icon-2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+            </svg>
+
+            <div class="hiddenContent">
+                <p>
+                    Steve is a typeface designer based in Louisville, Colorado, who manages a global team for Monotype. With
+                    over 25
+                    years
+                    in the business, he has designed corporate faces for Android, Citrix, Microsoft, Nextel, and Xbox. Steve
+                    frequently
+                    researches and lectures about the work of typographer Frederic Goudy, and has produced revivals of Goudy’s
+                    Bertham,
+                    Friar, and Tory Text among many others. He is a letterpress printer, musician, author, and avid cyclist.
+                </p>
+                <ul>
+                    <li>Apparently we had reached a great height in the atmosphere, for the sky was a dead black.</li>
+                    <li>and the stars had ceased to
+                        twinkle.</li>
+                    <li>By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside.
+                    </li>
+                    <li>
+                        Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the
+                        clouds.
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="component-1">
+            <p class="component-1-p">02</p>
+            <p class="component-1-p">How long do I have to return my chair</p>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                class="icon">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                class="icon-2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+            </svg>
+            <div class="hiddenContent">
+                <p>
+                    Steve is a typeface designer based in Louisville, Colorado, who manages a global team for Monotype. With
+                    over 25
+                    years
+                    in the business, he has designed corporate faces for Android, Citrix, Microsoft, Nextel, and Xbox. Steve
+                    frequently
+                    researches and lectures about the work of typographer Frederic Goudy, and has produced revivals of Goudy’s
+                    Bertham,
+                    Friar, and Tory Text among many others. He is a letterpress printer, musician, author, and avid cyclist.
+                </p>
+                <ul>
+                    <li>Apparently we had reached a great height in the atmosphere, for the sky was a dead black.</li>
+                    <li>and the stars had ceased to
+                        twinkle.</li>
+                    <li>By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside.
+                    </li>
+                    <li>
+                        Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the
+                        clouds.
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="component-1">
+            <p class="component-1-p">03</p>
+            <p class="component-1-p">How do you do</p>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                class="icon">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                class="icon-2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+            </svg>
+            <div class="hiddenContent">
+                <p>
+                    Steve is a typeface designer based in Louisville, Colorado, who manages a global team for Monotype. With
+                    over 25
+                    years
+                    in the business, he has designed corporate faces for Android, Citrix, Microsoft, Nextel, and Xbox. Steve
+                    frequently
+                    researches and lectures about the work of typographer Frederic Goudy, and has produced revivals of Goudy’s
+                    Bertham,
+                    Friar, and Tory Text among many others. He is a letterpress printer, musician, author, and avid cyclist.
+                </p>
+                <ul>
+                    <li>Apparently we had reached a great height in the atmosphere, for the sky was a dead black.</li>
+                    <li>and the stars had ceased to
+                        twinkle.</li>
+                    <li>By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside.
+                    </li>
+                    <li>
+                        Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the
+                        clouds.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    // 给每个手风琴的父元素添加点击事件 事件通过给内容div添加open类名达到点击收起和打开的效果
+    var accordionGroup = document.getElementsByClassName('component-1')
+    for(let i=0;i<accordionGroup.length;i++){
+        accordionGroup[i].addEventListener('click',()=>{
+            var includesOpen = !accordionGroup[i].className.includes('open')
+            includesOpen ? accordionGroup[i].classList.add('open'): accordionGroup[i].classList.remove('open')
+        })
+    }
+</script>
+</html>
